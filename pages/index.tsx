@@ -1,8 +1,10 @@
+// import Button from '@components/Button'
+import { css } from '@emotion/react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import { useEffect, useRef, useState } from 'react'
+import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
   const [products, setProducts] = useState<
