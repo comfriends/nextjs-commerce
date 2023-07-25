@@ -3,7 +3,7 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import { Input, Pagination, SegmentedControl, Select } from '@mantine/core'
 import { CATEGORY_MAP, FILTERS, TAKE } from 'constants/products'
-// import { IconSearch } from '@tabler/icons'
+import { IconSearch } from '@tabler/icons-react'
 import useDebounce from 'hooks/useDebounce'
 import { useQuery } from '@tanstack/react-query'
 import { useSession } from 'next-auth/react'
@@ -80,7 +80,7 @@ export default function Products() {
       {session && <p>안녕하세요. {session.user?.name}님</p>}
       <div className="mb-4">
         <Input
-          // icon={<IconSearch />}
+          icon={<IconSearch />}
           placeholder="Search"
           value={keyword}
           onChange={handleChange}

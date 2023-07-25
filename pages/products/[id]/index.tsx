@@ -10,7 +10,7 @@ import { useEffect, useState } from 'react'
 import { CATEGORY_MAP } from 'constants/products'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { Button } from '@mantine/core'
-import { IconHeart, IconHeartbeat } from '@tabler/icons'
+import { IconHeart, IconHeartbeat } from '@tabler/icons-react'
 import { useSession } from 'next-auth/react'
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
@@ -139,7 +139,7 @@ export default function Products(props: {
             </div>
             <Button
               // loading={isLoading}
-              disabled={wishlist == null}
+              // disabled={wishlist == null}
               leftIcon={
                 isWished ? (
                   <IconHeart size={20} stroke={1.5} />
@@ -154,6 +154,7 @@ export default function Products(props: {
                 root: { paddingRight: 14, height: 48 },
               }}
               onClick={() => {
+                console.log('찜하기')
                 if (session == null) {
                   alert('로그인이 필요해요')
                   router.push('/auth/login')
