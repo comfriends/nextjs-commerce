@@ -11,6 +11,7 @@ const nextConfig = {
       'raw.githubusercontent.com',
       'cdn.shopify.com',
       'cf.product-image.s.zigzag.kr',
+      'lh3.googleusercontent.com',
     ],
   },
 }
